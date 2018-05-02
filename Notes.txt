@@ -1,0 +1,124 @@
+A good docker container analogy is like the layers of an Onion. It's built on a certain operating system, but like an executable file, it has an ENTRYPOINT ["python"], that 
+is the specific function you set up for this docker container to process....
+
+It appears the following lines, ENTRYPOINT ["python"] and CMD ["app.y"], set the entry point to be executing the python run environment, to start python on the container, and then 
+to execute app.y... for building the REST Service to listen for the bounding box input, "(app.route('/<lang_code>/', methods=['GET'])" Flask, then directs 
+
+ENTRYPOINT ["python"]
+CMD ["app.py"]
+
+
+In the dockerfile, make sure that you use the -y option on required dependencies, so the install won't bail silently upon an error...
+
+Most other things were pretty straight forward...
+
+
+Here are some notes and links I took during development
+
+
+
+
+
+
+
+https://github.com/Kalimaha/simple_flask_dockerizer
+
+
+
+https://stackoverflow.com/questions/41001885/after-docker-build-the-container-is-not-displayed-why
+
+
+https://linuxconfig.org/how-to-check-centos-version
+
+https://gist.github.com/jmorton/558f7079ed2159156277#file-dockerfile
+
+
+https://stackoverflow.com/questions/24958140/what-is-the-difference-between-the-copy-and-add-commands-in-a-dockerfile
+
+
+remove all images
+docker rmi $(docker images -a -q)
+
+create file on linux: 
+echo "Hello you!" >> myfile.txt
+echo "this is 2nd line text" >> file.txt
+echo "last line!" >> file.txt
+
+DEBUGGING:
+
+https://www.packtpub.com/mapt/book/virtualization_and_cloud/9781787286986/6/ch06lvl1sec38/debugging-a-dockerfile
+
+
+
+Port Stuff:
+
+https://forums.docker.com/t/how-can-i-navigate-to-container-website-from-host-browser/25035/2
+
+
+Tomorrow, look at this:
+
+https://github.com/moby/moby/issues/15740
+
+
+
+
+cd /deployment/env/lib/python2.7/site-packages/simple_flask/core
+
+
+find / -type f -exec grep -H 'say_hallo' {} \;
+
+
+docker exec -t -i jovial_meninsky /bin/bash
+
+docker cp core.py musing_meninsky:/deployment/env/lib/python2.7/site-packages/simple_flask/core/core.py
+
+
+PS C:\Job\FNMOC\Working\simple_flask_dockerizer-master\simple_flask_dockerizer-master> docker cp qpoints.shx m
+using_meninsky:/deployment/env/lib/python2.7/site-packages/simple_flask/core/qpoints.shx
+
+
+Python Error Check:
+path = 'blam'
+try:
+    with open(path) as f:
+        print f.read()
+except IOError as exc:
+    raise IOError("%s: %s" % (path, exc.strerror))
+
+
+
+Docker Compose
+Estimated reading time: 1 minute
+Compose is a tool for defining and running multi-container Docker applications. To learn more about Compose refer to the following documentation:
+
+https://docs.docker.com/compose/
+
+REMEMBER THAT SHAPEFILE MUST GO IN /deployment/qpoints.shp
+
+http://192.168.99.102:5000/Kalimaha/?GET=-121.282 37.228,-113.123 37.228,-113.123 29.453,-121.282 29.453
+
+
+
+SIMPLE SIMPLE FLASK EXAMPLE
+
+http://containertutorials.com/docker-compose/flask-compose.html
+
+ENTRYPOINT VS CMD VS RUN ***
+
+http://goinbigdata.com/docker-run-vs-cmd-vs-entrypoint/
+
+flask import error:
+
+https://stackoverflow.com/questions/14792605/python-flask-import-error
+
+
+GDAL/OGR
+
+Create Polygon:
+http://pcjericks.github.io/py-gdalogr-cookbook/geometry.html#create-a-polygon
+
+
+
+
+
+
