@@ -1,6 +1,7 @@
 Query Points Overview:
 
-This is a REST API application for querying points within a bounding box in a Docker container. The application is built on Ubuntu 14.04, Python 2.7, Flask 0.10.1, and gdal/ogr 1.10.
+This is a REST API application for querying points within a bounding box in a Docker container. 
+The application is built on Ubuntu 14.04, Python 2.7, Flask 0.10.1, and gdal/ogr 1.10.
 
 Building and compiling the application:
 
@@ -37,7 +38,8 @@ SHAPEFILE (sample_data.shp):
 
 The sample_data.shp shapefile was generated using the python module: GenerateShapefileFromCSV.py
 
-If you decide to generate the shapefile yourself, consider adding an FID, unique feature identifier column. It may enhance performace. QGIS -> Field Calculator: $rownum
+If you decide to generate the shapefile yourself, consider adding an FID, unique feature identifier column. 
+It may enhance performace. QGIS -> Field Calculator: $rownum
 
 EXTENT: 183, 0, 0, 108 - ('Upper Y, Lower Y, Left X, Right X')
 
