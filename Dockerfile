@@ -11,7 +11,7 @@ RUN apt-get update
 RUN apt-get install -y python-gdal 
 RUN apt-get install -y python-simplejson
 RUN apt-get install -y python python-pip wget
-RUN apt-get install -y python-all-dev # may be dev-all
+RUN apt-get install -y python-all-dev
 RUN apt-get install -y python-flask
 
 RUN mkdir querypoints
